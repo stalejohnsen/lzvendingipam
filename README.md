@@ -13,9 +13,15 @@
 
 ## Screenshots
 
-![](/screenshots/2.png)
+![Azure IPAM Block view](https://user-images.githubusercontent.com/98233333/229578429-1619fdbd-a262-4742-b751-ba5c3058a725.png)
 
-![](/screenshots/3.png)
+![Github workflow](https://user-images.githubusercontent.com/98233333/229582332-b1a0e39d-8d8f-4517-ae32-43865c8a4029.png)
+
+![parameters](https://user-images.githubusercontent.com/98233333/229581348-c0f4787c-5e3e-4804-a1b1-6edc9b6e7ca3.png)
+
+![vnet](https://user-images.githubusercontent.com/98233333/229580473-08b73e76-7ee4-40f8-a772-0a74ee557978.png)
+
+![Azure IPAM Vnet view](https://user-images.githubusercontent.com/98233333/229579412-b7313133-9148-4af9-9453-4bfd0f5aab71.png)
 
 ## Available Commands
 
