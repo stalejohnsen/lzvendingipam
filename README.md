@@ -51,7 +51,7 @@ The new landing zone has been provisioned with a virtual network having the next
 
 ### Azure IPAM vnet view 
 
-Azure IPAM documents all our virtual network and the mapping to the configured address space blocks.
+Azure IPAM documents all our virtual networks and the mapping to the configured address space blocks.
 
 ![Azure IPAM Vnet view](https://user-images.githubusercontent.com/98233333/229759101-d3dc1149-aca2-4a7e-8b94-9249f1f72f96.png)
 
