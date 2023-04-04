@@ -10,15 +10,24 @@
 
 - [Azure IPAM](https://github.com/Azure/ipam "Azure IPAM repo")
 
+## Prerequisites 
+
+- [Azure IPAM](https://azure.github.io/ipam/#/deployment/README "Azure IPAM") or any other IPAM with an API to request an unused address space
+- Service Principal (with federated identity credential) with permission to access the IPAM and to deploy new landing zones
 
 ## Screenshots
 
+### Azure IPAM configured with a block for 10.50.0.0/16
+
 ![Azure IPAM Block view](https://user-images.githubusercontent.com/98233333/229578429-1619fdbd-a262-4742-b751-ba5c3058a725.png)
 
+### Github Actions workflow 
 ![Github workflow](https://user-images.githubusercontent.com/98233333/229582332-b1a0e39d-8d8f-4517-ae32-43865c8a4029.png)
 
+### Example parameters for new landing zone (subscription) deployment
 ![parameters](https://user-images.githubusercontent.com/98233333/229581348-c0f4787c-5e3e-4804-a1b1-6edc9b6e7ca3.png)
 
+### Deployed vnet 
 ![vnet](https://user-images.githubusercontent.com/98233333/229580473-08b73e76-7ee4-40f8-a772-0a74ee557978.png)
 
 ![Azure IPAM Vnet view](https://user-images.githubusercontent.com/98233333/229579412-b7313133-9148-4af9-9453-4bfd0f5aab71.png)
