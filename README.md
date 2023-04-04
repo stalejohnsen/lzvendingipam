@@ -54,7 +54,6 @@ Azure IPAM documents all our virtual network and the mapping to the configured a
 ## Future Updates
 
 - [ ] Input validations
-- [ ] Create unique ARM deployments
 - [ ] Workflow improvements
 - [ ] vWAN and hub-spoke flexibility
 - [ ] Multiple vnets in one landing zone
