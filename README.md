@@ -41,7 +41,7 @@ Single workflow combining the IPAM API call and the landing zone deployment with
 
 ### Deployed spoke vnet in the new landing zone
 
-The new landing zone has been provisioned with a virtual network as requested and the next available address space from the Azure IPAM block 10.50.0.0/16. Notice the tag on the virtual network which Azure IPAM uses to map the address space reservation to the new virtual network for documentation.
+The new landing zone has been provisioned with a virtual network with the next available address space from the Azure IPAM block 10.50.0.0/16. Notice the tag on the virtual network which Azure IPAM uses to map the address space reservation to the new virtual network for documentation.
 
 ![vnet](https://user-images.githubusercontent.com/98233333/229580473-08b73e76-7ee4-40f8-a772-0a74ee557978.png)
 
