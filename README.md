@@ -70,7 +70,10 @@ Contributions, issues, and feature requests are welcome! 🤝
 Give a ⭐️ if you like this project!
 
 ## Credits 
+
 Thanks to the maintainers of Bicep lz vending module and the Azure IPAM project for inspiration and code examples!
-[@jtracey93]
-[@hbendana]
-[@DCMattyG]
+
+- [@jtracey93](https://www.github.com/jtracey93)
+- [@hbendana](https://www.github.com/hbendana)
+- [@DCMattyG](https://www.github.com/DCMattyG)
+
