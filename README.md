@@ -2,6 +2,8 @@
 
 <p align="center">This is a simple example of the Cloud Adoption Framework subscription vending guidance to show how you can automate the deployment of new application landing zones with an integration to the platform team operated IPAM tool. In this example we are using Azure IPAM but it could be any IPAM tool with an accessible API to reserve/get an unused address space. Read more about Subscription vending at https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending</p>
 
+![Subscription vending](https://user-images.githubusercontent.com/98233333/229801412-b68a700e-b04a-464f-a026-bc4d8a6b2633.png)
+
 ## Concept overview
 
 ![lzvendingflow](https://user-images.githubusercontent.com/98233333/229721561-7a67062d-ebf6-4453-abf4-322e437dc70e.png)
