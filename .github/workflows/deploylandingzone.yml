@@ -1,0 +1,62 @@
+name: "Deploy New Landing Zone"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - landingZones/corp/*.json
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  IPAM_API_SCOPE: "" # CHANGE
+  IPAM_URL: "https://ipam-xxxx.azurewebsites.net/api/spaces/CorpSpace/blocks/CorpBlockWestEurope01/reservations" # CHANGE
+  IPAM_SIZE: 24 # This will reserve the next available /24 address space from the Azure IPAM block in IPAM_URL
+  MANAGEMENT_SUBSCRIPTION_ID: "" # CHANGE
+  LOCATION: 'westeurope' # CHANGE
+  TOP_LEVEL_MG_PREFIX: 'alz' # CHANGE
+  TEMPLATE_FILE: 'main.bicep' # CHANGE
+
+jobs:
+  Deploy_New_LandingZone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: "OIDC Login To Tenant"
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ env.MANAGEMENT_SUBSCRIPTION_ID }}
+          enable-AzPSSession: true
+
+      - name: "Get Available Address Space From IPAM"
+        id: getipam
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            .\pipeline-scripts\fetchAddressPrefix.ps1
+          azPSVersion: "latest"
+      
+      - name: "Get Latest Landing Zone Parameter File"
+        id: getlzparameter
+        shell: pwsh
+        run: |
+          $param = Get-ChildItem -Path .\landingZones\corp\ -Filter *.json | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+          Write-Output "parameter_file=$($param)" >> $Env:GITHUB_OUTPUT
+      
+      - name: "Deploy Landing Zone"
+        id: deploylz
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            .\pipeline-scripts\Deploy-LandingZone.ps1 -Location ${{ env.LOCATION}} -TopLevelMGPrefix ${{ env.TOP_LEVEL_MG_PREFIX}} -AddressPrefix ${{ steps.getipam.outputs.cidr}} -VnetTag ${{ steps.getipam.outputs.id}} -TemplateFile ${{ env.TEMPLATE_FILE}} -TemplateParameterFile ${{ steps.getlzparameter.outputs.parameter_file}}
+          azPSVersion: "latest"
