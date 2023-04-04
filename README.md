@@ -63,10 +63,14 @@ Azure IPAM documents all our virtual networks and the mapping to the configured 
 - [ ] Multiple vnets in one landing zone
 - [ ] Multiple landing zones (parameter files) in one deployment
 
-## 🤝 Support
+## Support
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome! 🤝 
 
 Give a ⭐️ if you like this project!
 
-Thanks to the maintainers of Bicep lz vending module and the Azure IPAM project for code examples!
+## Credits 
+Thanks to the maintainers of Bicep lz vending module and the Azure IPAM project for inspiration and code examples!
+[@jtracey93]
+[@hbendana]
+[@DCMattyG]
