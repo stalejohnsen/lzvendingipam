@@ -68,3 +68,5 @@ Azure IPAM documents all our virtual network and the mapping to the configured a
 Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
+
+Thanks to the maintainers of Bicep lz vending module and the Azure IPAM project for code examples!
