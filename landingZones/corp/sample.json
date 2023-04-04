@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "parSubscriptionWorkload": {
+        "value": "Production"
+      },
+      "parExistingSubscriptionId": { 
+        "value": ""
+      },
+      "parSubscriptionManagementGroupAssociationEnabled": {
+        "value": true
+      },
+      "parSubscriptionManagementGroupId": {
+        "value": "alz-landingzones-corp"
+      },
+      "parVirtualNetworkEnabled": {
+        "value": true
+      },
+      "parVirtualNetworkResourceGroupName": {
+        "value": "rg-networking-001"
+      },
+      "parVirtualNetworkLocation": {
+        "value": "westeurope"
+      },
+      "parVirtualNetworkName": {
+        "value": "vnet-internalapp-001"
+      },
+      "parVirtualNetworkPeeringEnabled": {
+        "value": true
+      },
+      "parHubNetworkResourceId": {
+        "value": ""
+      },
+      "parVirtualNetworkUseRemoteGateways": {
+        "value": false
+      },
+      "parDisableTelemetry": {
+        "value": false
+      }
+    }
+  }
