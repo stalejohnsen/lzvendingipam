@@ -1,6 +1,6 @@
 <h1 align="center">Bicep landing zone vending module for Azure + Azure IPAM example </h1>
 
-<p align="center">This is a simple example of the Cloud Adoption Framework subscription vending guidance to show how you can automate the deployment of new application landing zones integrated to the platform team operated IPAM tool. In this example I am using Azure IPAM but it could be any IPAM tool with an accessible API to reserve/get an unused address space. Read more about Subscription vending at https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending</p>
+<p align="center">This is a simple example of the Cloud Adoption Framework subscription vending guidance to show how you can automate the deployment of new application landing zones with an integration to the platform team operated IPAM tool. In this example I am using Azure IPAM but it could be any IPAM tool with an accessible API to reserve/get an unused address space. Read more about Subscription vending at https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending</p>
 
 ## Concept overview
 
