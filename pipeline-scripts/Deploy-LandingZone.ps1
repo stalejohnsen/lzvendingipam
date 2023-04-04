@@ -22,4 +22,14 @@ $IpamResIdTag = @{
     'ipam-res-id' = $VnetTag
   }
 
-New-AzManagementGroupDeployment -ManagementGroupId $TopLevelMGPrefix -Location $Location -TemplateFile $TemplateFile -TemplateParameterFile $TemplateParameterFile -parVirtualNetworkAddressSpace $AddressPrefix -parTags $IpamResIdTag
+  $inputObject = @{
+    DeploymentName                = 'lz-vending-{0}' -f ( -join (Get-Date -Format 'yyyyMMddTHHMMssffffZ')[0..63])
+    Location                      = $Location
+    ManagementGroupId             = $TopLevelMGPrefix
+    TemplateFile                  = $TemplateFile
+    TemplateParameterFile         = $TemplateParameterFile
+    parVirtualNetworkAddressSpace = $AddressPrefix
+    parTags                       = $IpamResIdTag
+    Verbose                       = $true
+  }
+  New-AzManagementGroupDeployment @inputObject
