@@ -26,7 +26,7 @@
 ### Azure IPAM blocks
 Azure IPAM with the concept of Spaces and Blocks for IP address management. Here we have configured a simple block for 10.50.0.0/16 to be further segmented into smaller landing zones. 
 
-![Azure IPAM Block view](https://user-images.githubusercontent.com/98233333/229578429-1619fdbd-a262-4742-b751-ba5c3058a725.png)
+![Azure IPAM Block view](https://user-images.githubusercontent.com/98233333/229759410-12747ac1-b264-4afd-ac1e-d004b0e72a20.png)
 
 ### Example parameters for new landing zone (subscription) deployment
 Fill in details like subscription name, management group placement, virtual network name for the new landing zone. Notice that we are not setting the address space for the virtual network here. We will get the address space from Azure IPAM to not conflict with other address spaces in our Azure environment. 
@@ -43,13 +43,17 @@ Single workflow combining the IPAM API call and the landing zone deployment with
 
 The new landing zone has been provisioned with a virtual network with the next available address space from the Azure IPAM block 10.50.0.0/16. Notice the tag on the virtual network which Azure IPAM uses to map the address space reservation to the new virtual network for documentation.
 
-![vnet](https://user-images.githubusercontent.com/98233333/229580473-08b73e76-7ee4-40f8-a772-0a74ee557978.png)
+![vnet](https://user-images.githubusercontent.com/98233333/229760276-312c2b91-6298-42e2-8d5b-ca7898ad9f25.png)
+
+### Peering to hub 
+
+![Peering](https://user-images.githubusercontent.com/98233333/229760611-4d9cb94f-3ce2-4041-95ff-b4a71f884623.png)
 
 ### Azure IPAM vnet view 
 
 Azure IPAM documents all our virtual network and the mapping to the configured address space blocks.
 
-![Azure IPAM Vnet view](https://user-images.githubusercontent.com/98233333/229579412-b7313133-9148-4af9-9453-4bfd0f5aab71.png)
+![Azure IPAM Vnet view](https://user-images.githubusercontent.com/98233333/229759101-d3dc1149-aca2-4a7e-8b94-9249f1f72f96.png)
 
 ## Future Updates
 
